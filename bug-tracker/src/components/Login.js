@@ -5,10 +5,10 @@ import { AuthContext } from './AuthContext';
 const Login = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [role, setRole] = useState('Developer'); // 🔥 Default to Developer
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // ✅ TEMP: Hardcoded users (to avoid import path issues on GitHub Pages)
   const users = [
     { username: 'Naik', password: 'abcd', role: 'Developer' },
     { username: 'Mang', password: 'abcd', role: 'Manager' }
@@ -18,18 +18,17 @@ const Login = () => {
     e.preventDefault();
 
     const user = users.find(
-      (u) => u.username === username && u.password === password
+      (u) =>
+        u.username === username &&
+        u.password === password &&
+        u.role === role
     );
 
     if (user) {
       login(user);
-      if (user.role === 'Manager') {
-        navigate('/manager-dashboard');
-      } else {
-        navigate('/dashboard');
-      }
+      navigate(user.role === 'Manager' ? '/manager-dashboard' : '/dashboard');
     } else {
-      alert('Invalid credentials');
+      alert('Invalid credentials or role');
     }
   };
 
@@ -54,6 +53,14 @@ const Login = () => {
             style={styles.input}
             required
           />
+          <select
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+            style={{...styles.input,  width:"107.5%",}}
+          >
+            <option value="Developer">Developer</option>
+            <option value="Manager">Manager</option>
+          </select>
           <button type="submit" style={styles.button}>
             Login
           </button>

@@ -55,7 +55,8 @@ const TaskForm = () => {
           ...task,
           id: Date.now(),
           createdBy: user.username,
-          assignee: user.role === 'Developer' ? user.username : task.assignee,
+          assignee: task.assignee,
+
         },
       ];
     }
@@ -69,9 +70,9 @@ const TaskForm = () => {
   return (
     <div style={styles.container}>
       <h2 style={styles.heading}>
-
+        
         {editingTask ? 'Edit Task' : 'Create New Task'}</h2>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1px', marginRight: "2vh" }}>
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1px',marginRight:"2vh" }}>
         <input
           type="text"
           name="title"
@@ -112,17 +113,18 @@ const TaskForm = () => {
           )}
         </select>
 
-        {user?.role === 'Manager' && (
-          <input
-            type="text"
-            name="assignee"
-            placeholder="Assignee"
-            value={task.assignee}
-            onChange={handleChange}
-            style={styles.input}
-            required
-          />
-        )}
+  {/* {user?.role === 'Manager' && ( */}
+  <input
+    type="text"
+    name="assignee"
+    placeholder="Assignee"
+    value={task.assignee}
+    onChange={handleChange}
+    style={styles.input}
+    required
+  />
+{/* )} */}
+
 
         <input
           type="date"
@@ -151,55 +153,55 @@ const TaskForm = () => {
 };
 
 const styles = {
-  container: {
-    maxWidth: '600px',
-    margin: '40px auto',
-    background: '#fff',
-    borderRadius: '10px',
-    padding: '30px',
-    boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-  },
-  heading: {
-    textAlign: 'center',
+    container: {
+      maxWidth: '600px',
+      margin: '40px auto',
+      background: '#fff',
+      borderRadius: '10px',
+      padding: '30px',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+    },
+    heading: {
+      textAlign: 'center',
     //   fontSize: '24px',
-    marginBottom: '25px',
+      marginBottom: '25px',
     //   color: '#333',
-    fontSize: '28px', color: '#2d3436'
-  },
-  input: {
-    padding: '10px',
-    borderRadius: '6px',
-    border: '1px solid #ccc',
-    fontSize: '16px',
-    width: '100%',
-  },
-  select: {
-    padding: '10px',
-    borderRadius: '6px',
-    border: '1px solid #ccc',
-    fontSize: '16px',
-    width: '104%',
-  },
-  textarea: {
-    padding: '10px',
-    borderRadius: '6px',
-    border: '1px solid #ccc',
-    fontSize: '16px',
-    width: '100%',
-    height: '100px',
-  },
-  button: {
-    backgroundColor: '#007bff',
-    color: '#fff',
-    padding: '12px',
-    border: 'none',
-    marginLeft: "1.2vh",
-    borderRadius: '20px',
-    fontWeight: 'bold',
-    fontSize: '16px',
-    marginTop: '20px',
-    cursor: 'pointer',
-    transition: 'background-color 0.3s ease',
-  }
-};
+      fontSize: '28px', color: '#2d3436'
+    },
+    input: {
+      padding: '10px',
+      borderRadius: '6px',
+      border: '1px solid #ccc',
+      fontSize: '16px',
+      width: '100%',
+    },
+    select: {
+      padding: '10px',
+      borderRadius: '6px',
+      border: '1px solid #ccc',
+      fontSize: '16px',
+      width: '104%',
+    },
+    textarea: {
+      padding: '10px',
+      borderRadius: '6px',
+      border: '1px solid #ccc',
+      fontSize: '16px',
+      width: '100%',
+      height: '100px',
+    },
+    button: {
+      backgroundColor: '#007bff',
+      color: '#fff',
+      padding: '12px',
+      border: 'none',
+     marginLeft:"1.2vh",
+      borderRadius: '20px',
+      fontWeight: 'bold',
+      fontSize: '16px',
+      marginTop: '20px',
+      cursor: 'pointer',
+      transition: 'background-color 0.3s ease',
+    }
+  };
 export default TaskForm;
