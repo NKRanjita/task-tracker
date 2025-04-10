@@ -1,6 +1,6 @@
 const users = [
-    { username: 'ranj', password: '2222', role: 'Developer' },
-    { username: 'manager1', password: '1234', role: 'Manager' }
+    { username: 'Ranita', password: 'Ranjita123', role: 'Developer' },
+    { username: 'Manager', password: 'Manager123', role: 'Manager' }
   ];
   
   export default users;
