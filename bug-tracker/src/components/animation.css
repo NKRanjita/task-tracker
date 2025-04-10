@@ -1,0 +1,137 @@
+/* Font and Base Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right,#dbeafe, #ffffff);
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #6c5ce7;
+    color: #fff;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(28, 23, 71, 0.3);
+  }
+  
+  button:hover {
+    background-color: #a29bfe;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(108, 92, 231, 0.4);
+  }
+  
+  /* Container Transitions */
+  .container {
+    animation: fadeIn 0.8s ease-in-out;
+  }
+  
+  /* Card or Task Fade Animation */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Form Fade Up */
+  form {
+    animation: slideUp 1s ease;
+  }
+  
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Input Styling */
+  input,
+  textarea,
+  select {
+    font-family: inherit;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+  
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px rgba(108, 92, 231, 0.4);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.card-slide-in {
+  animation: slideInUp 0.5s ease forwards;
+}
+
+.bounce-btn {
+  transition: transform 0.2s;
+}
+.bounce-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Button Colors */
+.approve-btn {
+  background-color: #00cec9;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reopen-btn {
+  background-color: #e17055;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Select dropdown */
+.dropdown {
+  padding: 6px 12px;
+  border: 1px solid #dfe6e9;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
