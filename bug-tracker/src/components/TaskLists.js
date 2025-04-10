@@ -22,9 +22,9 @@ const TaskList = () => {
       user?.role === 'Manager'
         ? stored
         : stored.filter(
-            task =>
-              task.assignee === user?.username || task.createdBy === user?.username
-          );
+          task =>
+            task.assignee === user?.username || task.createdBy === user?.username
+        );
     setTasks(relevantTasks);
   };
 
@@ -84,9 +84,9 @@ const TaskList = () => {
       user?.role === 'Manager'
         ? stored
         : stored.filter(
-            task =>
-              task.assignee === user?.username || task.createdBy === user?.username
-          );
+          task =>
+            task.assignee === user?.username || task.createdBy === user?.username
+        );
     const filtered = status === 'All' ? relevant : relevant.filter(task => task.status === status);
     setTasks(filtered);
   };
@@ -102,7 +102,7 @@ const TaskList = () => {
         <div style={{ marginBottom: '20px' }}>
           <button
             onClick={() => navigate('/create')}
-            className="task-button" style={{borderRadius:"20px",justifyContent:"flex-start",width:"fit-content"}}
+            className="task-button" style={{ borderRadius: "20px", justifyContent: "flex-start", width: "fit-content" }}
           >
             + Create New Task
           </button>
@@ -134,17 +134,13 @@ const TaskList = () => {
               key={task.id}
               className="fade-in"
               style={{
-                // marginBottom: '20px',
-                // padding: '12px',
-                // borderBottom: '1px solid #ddd',
-                // backgroundColor: '#f9f9f9',
-                // borderRadius: '10px'
+               
                 padding: '15px',
                 border: '1px solid #dfe6e9',
                 borderRadius: '10px',
                 marginBottom: '15px',
                 backgroundColor: '#f9f9f9',
-                marginLeft:"-1.8vh"
+                marginLeft: "-1.8vh"
               }}
             >
               <strong style={{ fontSize: '18px' }}>{task.title}</strong><br />
@@ -156,19 +152,19 @@ const TaskList = () => {
 
               {user?.role === 'Developer' && task.createdBy === user?.username && task.status !== 'Closed' && (
                 <>
-                  <button onClick={() => handleEdit(task)} className="task-button" style={{ borderRadius:"20px" }}>Edit</button>
-                  <button onClick={() => handleDelete(task.id)} className="task-button" style={{ backgroundColor: '#e74c3c',borderRadius:"20px" }}>Delete</button>
+                  <button onClick={() => handleEdit(task)} className="task-button" style={{ borderRadius: "20px" }}>Edit</button>
+                  <button onClick={() => handleDelete(task.id)} className="task-button" style={{ backgroundColor: '#e74c3c', borderRadius: "20px" }}>Delete</button>
                   {task.status !== 'Pending Approval' && (
-                    <button onClick={() => markAsPendingApproval(task.id)} className="task-button" style={{ backgroundColor: '#3498db' ,borderRadius:"20px"}}>
+                    <button onClick={() => markAsPendingApproval(task.id)} className="task-button" style={{ backgroundColor: '#3498db', borderRadius: "20px" }}>
                       Mark as Complete
                     </button>
                   )}
                   {activeTimerId === task.id ? (
-                    <button onClick={stopTimer} className="task-button" style={{ backgroundColor: '#8e44ad' ,borderRadius:"20px"}}>
+                    <button onClick={stopTimer} className="task-button" style={{ backgroundColor: '#8e44ad', borderRadius: "20px" }}>
                       Stop Timer
                     </button>
                   ) : (
-                    <button onClick={() => startTimer(task.id)} className="task-button" style={{ backgroundColor: '#2ecc71' ,borderRadius:"20px"}}>
+                    <button onClick={() => startTimer(task.id)} className="task-button" style={{ backgroundColor: '#2ecc71', borderRadius: "20px" }}>
                       Start Timer
                     </button>
                   )}

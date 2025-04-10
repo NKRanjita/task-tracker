@@ -85,7 +85,7 @@ const ManagerDashboard = () => {
               borderRadius: '10px',
               marginBottom: '15px',
               backgroundColor: '#f9f9f9',
-              marginLeft:"-1.8vh"
+              marginLeft: "-1.8vh"
             }}>
               <strong style={{ fontSize: '18px', color: '#2d3436' }}>{task.title}</strong>
               <br />

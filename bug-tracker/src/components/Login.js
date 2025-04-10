@@ -58,16 +58,16 @@ const Login = () => {
 };
 
 const styles = {
-    pageWrapper: {
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh',
-        background: 'linear-gradient(to right, #dbeafe, #ffffff)'
+  pageWrapper: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    background: 'linear-gradient(to right, #dbeafe, #ffffff)'
 
-        
-      },
-      
+
+  },
+
   formContainer: {
     backgroundColor: '#ffffff',
     padding: '50px',
@@ -75,7 +75,7 @@ const styles = {
     boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
     width: '100%',
     maxWidth: '400px',
-    
+
   },
   heading: {
     textAlign: 'center',
@@ -94,7 +94,7 @@ const styles = {
     border: '1px solid #ccc',
     fontSize: '16px',
     fontFamily: 'Segoe UI, sans-serif',
-    marginLeft:"-1.5vh"
+    marginLeft: "-1.5vh"
   },
   button: {
     padding: '12px',
@@ -106,8 +106,8 @@ const styles = {
     fontWeight: 'bold',
     cursor: 'pointer',
     fontFamily: 'Segoe UI, sans-serif',
-    marginLeft:"0.5vh"
-    
+    marginLeft: "0.5vh"
+
   },
 };
 
