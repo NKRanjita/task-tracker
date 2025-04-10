@@ -155,7 +155,7 @@ const TaskForm = () => {
 const styles = {
     container: {
       maxWidth: '600px',
-      margin: '40px auto',
+      margin: '50px auto',
       background: '#fff',
       borderRadius: '10px',
       padding: '30px',
@@ -181,6 +181,7 @@ const styles = {
       border: '1px solid #ccc',
       fontSize: '16px',
       width: '104%',
+     
     },
     textarea: {
       padding: '10px',

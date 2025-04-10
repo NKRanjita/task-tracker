@@ -35,7 +35,7 @@ const Login = () => {
   return (
     <div style={styles.pageWrapper}>
       <div style={styles.formContainer}>
-        <h1 style={styles.heading}>Login</h1>
+        <h1 style={styles.heading}>Welcome Back</h1>
         <form onSubmit={handleSubmit} style={styles.form}>
           <input
             type="text"
@@ -102,6 +102,7 @@ const styles = {
     borderRadius: '6px',
     border: '1px solid #ccc',
     fontSize: '16px',
+     marginLeft:"-2vh",
     fontFamily: 'Segoe UI, sans-serif',
   },
   button: {
@@ -114,6 +115,7 @@ const styles = {
     fontWeight: 'bold',
     cursor: 'pointer',
     fontFamily: 'Segoe UI, sans-serif',
+    marginLeft:".2vh"
   },
 };
 
