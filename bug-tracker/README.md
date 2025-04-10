@@ -26,12 +26,12 @@ A responsive and feature-rich **task/bug tracker** built with **React.js**. This
 ## Demo Login Credentials
 
 ### Developer
-- **Username:** `Ranita`
-- **Password:** `Ranita123`
+- **Username:** `ranita`
+- **Password:** `111111`
 
 ### Manager
-- **Username:** `Manager`
-- **Password:** `Manager123`
+- **Username:** `manager`
+- **Password:** `222222`
 
 > This is a mock login for demonstration only.
 
@@ -42,8 +42,8 @@ A responsive and feature-rich **task/bug tracker** built with **React.js**. This
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/NKRanjita/task-tracker.git
-cd task-tracker
+git clone https://github.com/NKRanjita/bug-tracker.git
+cd bug-tracker
 ```
 
 ### 2. Install Dependencies
