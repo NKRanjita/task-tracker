@@ -1,7 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from './AuthContext';
-import users from '../dat/mockUsers';
 
 const Login = () => {
   const [username, setUsername] = useState('');
@@ -9,8 +8,15 @@ const Login = () => {
   const { login } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  // ✅ TEMP: Hardcoded users (to avoid import path issues on GitHub Pages)
+  const users = [
+    { username: 'Naik', password: 'abcd', role: 'Developer' },
+    { username: 'Mang', password: 'abcd', role: 'Manager' }
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
+
     const user = users.find(
       (u) => u.username === username && u.password === password
     );
@@ -63,11 +69,8 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     height: '100vh',
-    background: 'linear-gradient(to right, #dbeafe, #ffffff)'
-
-
+    background: 'linear-gradient(to right, #dbeafe, #ffffff)',
   },
-
   formContainer: {
     backgroundColor: '#ffffff',
     padding: '50px',
@@ -75,7 +78,6 @@ const styles = {
     boxShadow: '0 8px 16px rgba(0,0,0,0.1)',
     width: '100%',
     maxWidth: '400px',
-
   },
   heading: {
     textAlign: 'center',
@@ -94,7 +96,6 @@ const styles = {
     border: '1px solid #ccc',
     fontSize: '16px',
     fontFamily: 'Segoe UI, sans-serif',
-    marginLeft: "-1.5vh"
   },
   button: {
     padding: '12px',
@@ -106,8 +107,6 @@ const styles = {
     fontWeight: 'bold',
     cursor: 'pointer',
     fontFamily: 'Segoe UI, sans-serif',
-    marginLeft: "0.5vh"
-
   },
 };
 
