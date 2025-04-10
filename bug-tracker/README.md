@@ -26,12 +26,12 @@ A responsive and feature-rich **task/bug tracker** built with **React.js**. This
 ## Demo Login Credentials
 
 ### Developer
-- **Username:** `ranita`
-- **Password:** `111111`
+- **Username:** `Naik`
+- **Password:** `abcd`
 
 ### Manager
-- **Username:** `manager`
-- **Password:** `222222`
+- **Username:** `Mang`
+- **Password:** `abcd`
 
 > This is a mock login for demonstration only.
 
